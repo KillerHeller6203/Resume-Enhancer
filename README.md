@@ -73,9 +73,8 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Set up environment variables
+# Set up environment variables edit .env and add your GEMINI_API_KEY
 cp .env .env
-# Edit .env and add your GEMINI_API_KEY
 
 # Run the server
 uvicorn main:app --reload --port 8000
@@ -92,9 +91,8 @@ cd frontend
 # Install dependencies
 npm install
 
-# Set up environment variables
+# Set up environment variables, set NEXT_PUBLIC_API_URL=http://localhost:8000
 cp .env.local.example .env.local
-# Edit .env.local — set NEXT_PUBLIC_API_URL=http://localhost:8000
 
 # Run development server
 npm run dev
@@ -179,7 +177,7 @@ curl -X POST http://localhost:8000/analyze/text \
 
 | Variable | Description |
 |---|---|
-| `GEMINI_API_KEY` | Your Google Gemini API key (never commit this!) |
+| `GEMINI_API_KEY` | Your Google Gemini API key |
 
 ### Frontend (`.env.local`)
 
