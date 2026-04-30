@@ -2,7 +2,7 @@
 
 A full-stack web application that analyzes resumes and provides actionable AI-powered feedback covering language, structure, ATS compatibility, and impact.
 
-**Live Demo:** [Live Demo](https://resume-enhancer-gamma.vercel.app/)
+**Live Demo:** [Live Demo](https://resume-enhancer-one.vercel.app/)
 
 ---
 
