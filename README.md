@@ -2,7 +2,7 @@
 
 A full-stack web application that analyzes resumes and provides actionable AI-powered feedback covering language, structure, ATS compatibility, and impact.
 
-**Live Demo:** _[Add your deployed URL here]_
+**Live Demo:** [Live Demo](https://resume-enhancer-gamma.vercel.app/)
 
 ---
 
@@ -12,7 +12,7 @@ A full-stack web application that analyzes resumes and provides actionable AI-po
 |---|---|
 | Frontend | Next.js 15 (App Router) + Tailwind CSS |
 | Backend | Python + FastAPI |
-| AI | Anthropic Claude (claude-sonnet-4-20250514) |
+| AI | Google Gemini (gemini-2.5-flash) |
 | PDF Parsing | pdfplumber |
 | Deployment | Vercel (frontend) + Render/Railway (backend) |
 
@@ -59,7 +59,7 @@ resume-enhancer/
 ### Prerequisites
 - Node.js 18+
 - Python 3.10+
-- An [Anthropic API key](https://console.anthropic.com/)
+- A [Google AI / Gemini API key](https://aistudio.google.com/apikey)
 
 ### Backend
 
@@ -75,7 +75,7 @@ pip install -r requirements.txt
 
 # Set up environment variables
 cp .env .env
-# Edit .env and add your ANTHROPIC_API_KEY
+# Edit .env and add your GEMINI_API_KEY
 
 # Run the server
 uvicorn main:app --reload --port 8000
@@ -151,7 +151,7 @@ curl -X POST http://localhost:8000/analyze/text \
 2. Connect your GitHub repo, set root to `backend/`
 3. Build command: `pip install -r requirements.txt`
 4. Start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-5. Add environment variable: `ANTHROPIC_API_KEY=your_key`
+5. Add environment variable: `GEMINI_API_KEY=your_key`
 
 ### Frontend (Vercel)
 
@@ -164,10 +164,10 @@ curl -X POST http://localhost:8000/analyze/text \
 
 ## Design Decisions
 
-- **Anthropic Claude** was chosen as the AI provider for its structured output reliability and strong instruction-following, which is critical for parsing section-by-section resume JSON.
+- **Google Gemini** was chosen as the AI provider for its structured output reliability, speed, and strong instruction-following, which is critical for parsing section-by-section resume JSON.
 - **pdfplumber** is used for PDF extraction as it handles multi-column layouts better than basic PDF parsers.
 - **FastAPI** provides automatic OpenAPI docs, async support, and clean type-based validation.
-- The frontend uses a warm editorial aesthetic (DM Serif Display + DM Mono, cream/ink palette) to feel premium and trustworthy — appropriate for a career tool.
+- The frontend uses a clean, modern aesthetic (Satoshi + Inter, neutral ink palette) to feel premium and trustworthy — appropriate for a career tool.
 - All AI output is returned as structured JSON, making the frontend display logic clean and predictable.
 - No resume data is stored anywhere — each request is stateless.
 
@@ -179,7 +179,7 @@ curl -X POST http://localhost:8000/analyze/text \
 
 | Variable | Description |
 |---|---|
-| `ANTHROPIC_API_KEY` | Your Anthropic API key (never commit this!) |
+| `GEMINI_API_KEY` | Your Google Gemini API key (never commit this!) |
 
 ### Frontend (`.env.local`)
 
