@@ -14,7 +14,7 @@ A full-stack web application that analyzes resumes and provides actionable AI-po
 | Backend | Python + FastAPI |
 | AI | Google Gemini (gemini-2.5-flash) |
 | PDF Parsing | pdfplumber |
-| Deployment | Vercel (frontend) + Render/Railway (backend) |
+| Deployment | Vercel (frontend) + Render (backend) |
 
 ---
 
