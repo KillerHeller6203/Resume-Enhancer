@@ -387,7 +387,7 @@ export default function HomePage() {
             <div
               ref={heroRef}
               className="hero-bg text-center mb-10 py-16 px-4 rounded-3xl"
-              style={{ minHeight: "340px" }}
+              style={{ minHeight: "auto" }}
             >
               {/* ── Orb 1 — lime, 15% opacity, blur-100, 18s drift ── */}
               <div
@@ -456,7 +456,7 @@ export default function HomePage() {
                 className="mb-3 relative"
                 style={{
                   fontFamily: "var(--font-display)",
-                  fontSize: "clamp(2.5rem, 6vw, 4rem)",
+                  fontSize: "clamp(1.8rem, 6vw, 4rem)",
                   fontWeight: 700,
                   lineHeight: 1.1,
                   color: "var(--ink)",
