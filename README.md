@@ -164,7 +164,7 @@ curl -X POST http://localhost:8000/analyze/text \
 
 - **Google Gemini** was chosen as the AI provider for its structured output reliability, speed, and strong instruction-following, which is critical for parsing section-by-section resume JSON.
 - **pdfplumber** is used for PDF extraction as it handles multi-column layouts better than basic PDF parsers.
-- **FastAPI** provides automatic OpenAPI docs, async support, and clean type-based validation.
+- **FastAPI** provides automatic OpenAPI docs, async support, and clean type based validation.
 - The frontend uses a clean, modern aesthetic (Satoshi + Inter, neutral ink palette) to feel premium and trustworthy — appropriate for a career tool.
 - All AI output is returned as structured JSON, making the frontend display logic clean and predictable.
 - No resume data is stored anywhere — each request is stateless.
